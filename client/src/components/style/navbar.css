@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar__container{
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: c;
+}
+
+
+.navbar__logo{
+    color: wheat;
+   letter-spacing: 5px;
+   padding-top: 20px;
+   padding-left: 10px;
+   
+}
+
+.navbar__Search{
+    color: wheat;
+   letter-spacing: 5px;
+   padding-top: 14px;
+   width: 60%;
+   padding-left: 10px;
+}
+
+.navbar__Search input{
+    width: 100%;
+    height: 25px;
+    border-radius: 10px;
+    border: none;
+    padding: 5px;
+    outline: none;
+}

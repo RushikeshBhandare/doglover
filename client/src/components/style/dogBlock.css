@@ -1,0 +1,24 @@
+.DogBlock__Box{
+    width: 300px;
+    height: 350px;
+    border: 2px solid red;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.DogBox__image{
+    height: 300px;
+    width: 300px;
+    border: 2px dotted black;
+}
+
+.DogBox__image img{
+    width:  300px;
+    height: 300px;
+}
+
+
+.DogBox__name{
+    height: 50px;
+    border: 2px solid red;
+}
