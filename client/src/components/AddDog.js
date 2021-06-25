@@ -72,7 +72,7 @@ const AddDog = () =>{
     }
 
     return(
-        <div className="AddDog_Container">
+        <div key="add" className="AddDog_Container">
             <form onSubmit={onFormSubmit} className="AddDog__form" encType="multipart/form-data">
                 {/* Imaegs */}
                 

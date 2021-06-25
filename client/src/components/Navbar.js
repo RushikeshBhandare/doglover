@@ -17,7 +17,6 @@ const Navbar = () =>{
                     name:name
                 }
                 const responce = await axios.post('/dog/name', data)
-                console.log(responce.data)
                 setDogsByName(responce.data)
             }catch(error){
                 console.log("Error", error)
@@ -35,7 +34,7 @@ const Navbar = () =>{
     }
 
     return (
-        <div>
+        <div key="nav">
                 <div className="navbar__container">
                 <div className="navbar__logo">
                     DOGINFO

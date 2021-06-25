@@ -7,7 +7,7 @@ const DogBlock = ({_id, name}) =>{
 
 
     return(
-        <div key={_id}>    
+        <div key={name}>    
             <Link to={`/detail/${_id}`} >
                 <div className="DogBlock__Box">
                     <div className="DogBox__image">
