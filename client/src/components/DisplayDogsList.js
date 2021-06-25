@@ -1,4 +1,4 @@
-import react, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import DogBlock from './DogBlock'
 
@@ -11,7 +11,6 @@ const DisplayDogsList = () =>{
         const GetDogs = async() =>{
             try{
                 const responce = await axios.get('/dog/all')
-                console.log(responce.data)
                 setDogList(responce.data)
             }catch (error){
                 console.log(error)

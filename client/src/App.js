@@ -1,4 +1,4 @@
-import react from 'react'
+import React from 'react'
 import AddDog from './components/AddDog'
 import Navbar from './components/Navbar'
 import DisplayDogsList from './components/DisplayDogsList'

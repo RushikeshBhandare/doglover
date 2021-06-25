@@ -1,5 +1,5 @@
 import axios from 'axios'
-import react, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import DogBlock from './DogBlock'
 
 import ('./style/navbar.css')

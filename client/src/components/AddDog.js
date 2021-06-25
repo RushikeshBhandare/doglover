@@ -1,22 +1,9 @@
-import react, { useState } from 'react'
+import React, { useState } from 'react'
 import './style/addDog.css'
 import axios from 'axios'
 
 const AddDog = () =>{
 
-    // name : req.body.name,
-    // information: req.body.information,
-    // size: req.body.size,
-    // malediet: req.body.malediet,
-    // femalediet: req.body.femalediet,
-    // oneYearMaintainCostMale: req.body.oneYearMaintainCostMale,
-    // oneYearMaintainCostFemale: req.body.oneYearMaintainCostFemale,
-    // femailMatingSeason: req.body.femailMatingSeason,
-    // birthCount: req.body.birthCount,
-    // care: req.body.care,
-    // ailments: req.body.ailments,
-    // vacccination: req.body.vacccination,
-    // price : req.body.price
     const [image, setImage] = useState(null)
     const [name, setName] = useState('');
     const [information, setInformation] = useState('');
@@ -37,22 +24,22 @@ const AddDog = () =>{
       try{
             
         e.preventDefault();
-        const data = {
-                image,
-                name,
-                information,
-                size,
-                malediet,
-                femalediet,
-                oneYearMaintainCostMale,
-                oneYearMaintainCostFemale,
-                femailMatingSeason,
-                birthCount,
-                care,
-                ailments,
-                vacccination,
-                price
-        }
+        // const data = {
+        //         image,
+        //         name,
+        //         information,
+        //         size,
+        //         malediet,
+        //         femalediet,
+        //         oneYearMaintainCostMale,
+        //         oneYearMaintainCostFemale,
+        //         femailMatingSeason,
+        //         birthCount,
+        //         care,
+        //         ailments,
+        //         vacccination,
+        //         price
+        // }
 
         const formData = new FormData();
 
@@ -73,8 +60,7 @@ const AddDog = () =>{
 
 
         //Send Post Request 
-        const responce = await axios.post('/dog/add', formData)
-        console.log(responce)
+         await axios.post('/dog/add', formData)
 
       }catch (error){
          console.log("error is ", error)
@@ -82,7 +68,6 @@ const AddDog = () =>{
     }
 
     const onChangeFile = (e) =>{
-        console.log(e.target.files[0])
         setImage(e.target.files[0])
     }
 

@@ -1,5 +1,5 @@
 import axios from 'axios'
-import react, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Info from './Info'
 
 import ('./style/fullInfo.css')
@@ -44,12 +44,12 @@ const FullInfo = (props) =>{
         }
         getInfo()
         
-    },[])
+    },[props])
 
     return(
         <div>
             <div className="fullinfo__image">
-                <img src={`/dog/image/${props.match.params._id}`}/>
+                <img alt={name} src={`/dog/image/${props.match.params._id}`}/>
             </div>
             <Info FieldName="Price" disc = {`Rs ${price}`}/>
             <Info FieldName="Name" disc = {name}/>
