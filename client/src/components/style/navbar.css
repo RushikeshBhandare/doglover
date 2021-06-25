@@ -37,3 +37,14 @@
     padding: 5px;
     outline: none;
 }
+
+.DisplyDog__navbar__container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgba(214, 211, 211, 0);
+    border-bottom: 5px dotted black;
+    border-left: 5px dotted black;
+    border-right: 5px dotted black;
+    width: auto;
+}

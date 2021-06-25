@@ -3,9 +3,11 @@ const DogInfo = require('../models/DogInfo')
 const multer = require('multer')
 const Images = require('../models/Images')
 
+
+// get all
 router.get('/all', async(req, res)=>{
     try{
-        const data = await DogInfo.find()
+        const data = await DogInfo.find().sort('name')
         res.send(data)
     }catch (error){
         res.status.send(error)
@@ -14,6 +16,41 @@ router.get('/all', async(req, res)=>{
 
     res.send("hello its all Working ")
 })
+
+//get by id 
+router.get('/fullinfo/:id', async(req, res)=>{
+    try{
+        console.log('calling')
+        const doginfo = await DogInfo.findById(req.params.id)
+        if(!doginfo){
+            res.status(500).send('Data Not Found')
+        }else{
+            res.send(doginfo)
+        }
+
+    }catch(error){
+        res.status(500).send(error)
+    }
+})
+
+//get by name 
+router.post('/name', async(req, res)=>{
+    try{
+        if(!req.body.name == ''){
+            const responce = await DogInfo.find({"name":{$regex: req.body.name, $options:'i' }})
+            res.send(responce)
+        }else{
+          res.send([])
+
+        }
+
+    }catch(error){
+        console.log(error)
+        res.status(404).send(error)
+    }
+
+})
+
 
 const upload = multer({
     limits: {

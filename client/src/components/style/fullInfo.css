@@ -1,0 +1,30 @@
+.fullinfo__image{
+    margin-left: 25px;
+}
+
+.fullinfo__image img{
+    width: 300px;
+    height: 300px;
+}
+
+.fullinfo__info{
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 90%;
+    border-bottom: 2px solid gray
+}
+
+.fullinfo__info h2{
+    font-size: 30px;
+}
+
+.fullinfo__info span{
+    margin-top: 5px;
+    margin-left: 10px;
+    font-size: 25px;
+    padding: 2px;
+}
+
+.price{
+    color: rgb(75, 66, 66);
+}
