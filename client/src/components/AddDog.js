@@ -7,7 +7,7 @@ const AddDog = () =>{
     const [image, setImage] = useState(null)
     const [name, setName] = useState('');
     const [information, setInformation] = useState('');
-    const [size, setSize] = useState(undefined);
+    const [size, setSize] = useState('');
     const [malediet, setMalediet] = useState('');
     const [femalediet, setFemailDiet] = useState('');
     const [oneYearMaintainCostMale, setOneYearMaintainCostMale] = useState('');
@@ -17,7 +17,7 @@ const AddDog = () =>{
     const [care, setCare] = useState('');
     const [ailments, setAilments] = useState('');
     const [vacccination, setVaccination] = useState('');
-    const [price, setPrice] = useState(undefined);
+    const [price, setPrice] = useState('');
 
     // Submit Form 
     const onFormSubmit = async(e) =>{
@@ -61,7 +61,7 @@ const AddDog = () =>{
 
         //Send Post Request 
          await axios.post('/dog/add', formData)
-
+        alert('dog Added Success!S')
       }catch (error){
          console.log("error is ", error)
       }
@@ -90,7 +90,7 @@ const AddDog = () =>{
 
                 {/* size */}   
                 <label>size </label>
-                <input required type="number" placeholder="size in inch" value={size} onChange={(e)=>{setSize(e.target.value)}}/>
+                <input required type="text" placeholder="size in inch" value={size} onChange={(e)=>{setSize(e.target.value)}}/>
 
                  {/* malediet */}
                  <label>Male Diet </label>
@@ -113,7 +113,7 @@ const AddDog = () =>{
                 <input required type="text" value={femailMatingSeason}  placeholder="Mating Seson" onChange={(e)=>{setFemailmatingSeason(e.target.value)}}/>
 
                  {/* birthCount */}
-                 <label>Birth count </label>
+                 <label>Give Puppy  </label>
                 <input required type="number" value={birthCount}  placeholder="Birth count" onChange={(e)=>{setBirthCount(e.target.value)}}/>
 
                  {/* care */}
@@ -130,7 +130,7 @@ const AddDog = () =>{
 
                  {/* price */}
                  <label>Price </label>
-                <input required type="number" value={price}  placeholder="Price in RS" onChange={(e)=>{setPrice(e.target.value)}}/>
+                <input required type="text" value={price}  placeholder="Price in RS" onChange={(e)=>{setPrice(e.target.value)}}/>
 
                 <button className="AddDog__Button"  type="submit">Add Dog</button>
 

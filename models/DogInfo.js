@@ -15,7 +15,7 @@ const DogInfoSchema = new mongoose.Schema({
         require: true,
     },
     size:{
-        type: Number,
+        type: String,
         required: true
     },
     malediet:{
@@ -55,7 +55,7 @@ const DogInfoSchema = new mongoose.Schema({
         required: true
     },
     price : {
-        type: Number,
+        type: String,
         required: true
     }
     

@@ -10,6 +10,10 @@
     cursor: pointer;
 } */
 
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+
+
 .DogBlock__Box{
     width: 150px;
     height: 185px;
@@ -20,6 +24,8 @@
     border-radius: 10px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    
 }
 
 .DogBlock__Box:hover{

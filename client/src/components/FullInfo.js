@@ -57,10 +57,12 @@ const FullInfo = (props) =>{
             <Info FieldName="Care" disc = {care}/>
             <Info FieldName="Male Diet" disc = {maleDiet}/>
             <Info FieldName="Femail Diet" disc = {femailDiet}/>
-            <Info FieldName="Maintain Cost male" disc = {oneYearMaintainCostMale}/>
-            <Info FieldName="Maintain Cost male" disc = {oneYearMaintainCostFemale}/>
+            <Info FieldName="What to do after the sixth week?" disc = "After the sixth week of pregnancy, food intake should be gradually increased and high energy, low fiber foods are recommended ie the premium diets available from the veterinary hospital. As the foetuses increase in size, abdominal pressure increases and frequent small meals are advised. During the last three weeks of pregnancy, food intake can be increased by up to one and a half times the normal level by feeding smaller meals more frequently. If you are unsure about any supplements or medication, please do not hesitate to contact your veterinarian. Some commonly used drugs should be avoided if your dog is pregnant."/>
+           
+            <Info FieldName="Maintain Cost Male" disc = {oneYearMaintainCostMale}/>
+            <Info FieldName="Maintain Cost Female" disc = {oneYearMaintainCostFemale}/>
             <Info FieldName="Female Mating Season" disc = {femailMatingSeason}/>
-            <Info FieldName="Birth Count" disc = {birthCount}/>
+            <Info FieldName="Give Puppy" disc = {birthCount}/>
             <Info FieldName="Vaccination" disc = {vacccination}/>
             <Info FieldName="Aliments" disc = {ailments}/>
 
