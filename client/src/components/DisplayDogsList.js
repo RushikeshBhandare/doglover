@@ -24,14 +24,15 @@ const DisplayDogsList = () =>{
     const DisplayDogs = () =>{
         return (
             dogList.map((dog)=>{
-                return <DogBlock _id={dog._id} name={dog.name}/>
+                return <DogBlock key={dog._id} _id={dog._id} name={dog.name}/>
             })
         )
     }
 
     return(
-        <div key='hello' className="DisplayDogList_container">
-            {DisplayDogs()}
+        <div className="DisplayDogList_container">
+
+          {DisplayDogs()}
         </div>
     )
 }

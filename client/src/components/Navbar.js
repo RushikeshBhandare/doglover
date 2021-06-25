@@ -9,7 +9,7 @@ import ('./style/displayDogList.css')
 const Navbar = () =>{
 
     const [dogsByName, setDogsByName] = useState([])
-    const [name, setName] = useState(undefined)
+    const [name, setName] = useState('')
     useEffect(()=>{
         const getDogs = async() =>{
             try{ 
@@ -28,7 +28,7 @@ const Navbar = () =>{
     const DisplayDogs = () =>{
          return(
              dogsByName.map((dog)=>{
-                 return <DogBlock _id={dog._id} name={dog.name}/>
+                 return <DogBlock key={dog._id} _id={dog._id} name={dog.name}/>
              })
          )
     }

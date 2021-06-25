@@ -6,12 +6,11 @@ import ('./style/dogBlock.css')
 const DogBlock = ({_id, name}) =>{
 
 
-    return(
-        <div key={name}>    
-            <Link to={`/detail/${_id}`} >
+    return( 
+            <Link key={_id} to={`/detail/${_id}`} >
                 <div className="DogBlock__Box">
                     <div className="DogBox__image">
-                    <img alt={name} src={`/dog/image/${_id}`}/>
+                       <img alt={name} src={`/dog/image/${_id}`}/>
 
                     </div>
                     <div className="DogBox__name">
@@ -20,7 +19,7 @@ const DogBlock = ({_id, name}) =>{
                     </div>
                 </div>
             </Link>
-        </div>
+        
     )
 }
 

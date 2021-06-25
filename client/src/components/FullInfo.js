@@ -24,7 +24,6 @@ const FullInfo = (props) =>{
         const getInfo = async() =>{
             try{    
                 const {data} = await axios.get(`/dog/fullinfo/${props.match.params._id}`)
-                console.log("Responce ", data)
                 setName(data.name);
                 setInformation(data.information);
                 setSize(data.size);
