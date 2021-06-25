@@ -7,7 +7,7 @@ const DogBlock = ({_id, name}) =>{
 
 
     return( 
-            <Link key={_id} to={`/detail/${_id}`} >
+            <Link style={{textDecoration:"none", color:"black"}} key={_id} to={`/detail/${_id}`} >
                 <div className="DogBlock__Box">
                     <div className="DogBox__image">
                        <img alt={name} src={`/dog/image/${_id}`}/>
